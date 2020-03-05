@@ -1,6 +1,6 @@
-# Horiseon
+# Mock Client, Horiseon, Code Refactoring
 
-## Acceptance Criteria
+## Mock Client's Acceptance Criteria
 
 ```
 GIVEN a webpage meets accessibility standards
@@ -16,7 +16,14 @@ WHEN I view the title element
 THEN I find a concise, descriptive title
 ```
 
-## User Request Fulfilled
+## Mock Client's Request Fulfilled
 
+
+```
 This Website has a codebase that follows accessibility standards
-so that the customer's site is optimized for search engines.
+so that the client's site is optimized for search engines. 
+It contains semantic HTML elements. 
+It contains accessible alt attributes for images.
+The heading attributes are in sequential order.
+The title element is concise, containing the name of the client's business.
+```
