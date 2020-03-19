@@ -141,8 +141,13 @@ function generatePassword() {
         passwordGeneratingCharacters[randomNumber];
         // Picking a Character out of the passwordGeneratingCharacters array.
         let newCharacters = passwordGeneratingCharacters[i];
+        // Repeatedly adding newCharacters variable until i (above) is greater than or equal to passwordLength input by user
+        password = password + newCharacters;
     }
 }
+
+// Using console.log to confirm generatePassword function works.
+console.log(generatePassword);
 
 // ====================================================================================================
 // Assignment Code
