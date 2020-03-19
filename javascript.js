@@ -15,10 +15,10 @@ let specialCharacters = ['!','@','#','$','%','^','&','*','~','.','/','<','>','?'
 console.log(specialCharacters);
 
 // Number Array
-let numbers = ['1','2','3','4','5','6','7','8','9','0'];
+let numbersCharacters = ['1','2','3','4','5','6','7','8','9','0'];
 
 // Using the console to confirm numbers array works.
-console.log(numbers);
+console.log(numbersCharacters);
 
 // Uppercase Letter Array --- used code from https://stackoverflow.com/questions/29719329/convert-array-into-upper-case
 let upperCaseLetters = String.prototype.toUpperCase.apply(lowerCaseLetters).split(",");
@@ -89,23 +89,43 @@ let passwordGeneratingCriteria = [];
 
 // Pushing Lowercase Letters Array into Password Generating Criteria Array if selected by user.
 if (wantsLowerCaseLetters) {
-    passwordGeneratingCriteria.push(lowerCaseLetters);
+    let joinedLowerCaseLetters = lowerCaseLetters.join('');
+    passwordGeneratingCriteria.push(joinedLowerCaseLetters);
 }
 
 // Pushing Uppercase Letters Array into Password Generating Criteria Array if selected by user.
 if (wantsUpperCaseLetters) {
-    passwordGeneratingCriteria.push(upperCaseLetters);
+    let joinedUpperCaseLetters = upperCaseLetters.join('');
+    passwordGeneratingCriteria.push(joinedUpperCaseLetters);
 }
 
 // Pushing Special Characters Array into Password Generating Criteria Array if selected by user.
 if (wantsSpecialCharacters) {
-    passwordGeneratingCriteria.push(specialCharacters);
+    let joinedSpecialCharacters = specialCharacters.join('');
+    passwordGeneratingCriteria.push(joinedSpecialCharacters);
 }
 
 // Pushing Numbers Array into Password Generating Criteria Array if selected by user.
 if (wantsNumbers) {
-    passwordGeneratingCriteria.push(numbers);
+    let joinedNumbers = numbersCharacters.join('');
+    passwordGeneratingCriteria.push(joinedNumbers);
 }
+
+// Join Selected Array Characters - Joining all of the Characters in the User's Password Generating Criteria
+let passwordGeneratingCharacters = passwordGeneratingCriteria.join('');
+
+// Using console to confirm the the arrays joined into an actionable string.
+console.log(passwordGeneratingCharacters);
+
+// ====================================================================================================
+// Where I left Off...
+// ====================================================================================================
+
+// function generatePassword() {
+// Math.floor(Math.random() * passwordGeneratingCharacters.length);
+// (i = 0; i < passwordLength; i = i + 1);
+// }
+// passwordLength
 
 // ====================================================================================================
 // Assignment Code
