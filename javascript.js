@@ -122,10 +122,27 @@ console.log(passwordGeneratingCharacters);
 // ====================================================================================================
 
 // function generatePassword() {
-// Math.floor(Math.random() * passwordGeneratingCharacters.length);
-// (i = 0; i < passwordLength; i = i + 1);
+  //For Loop For Number Generation
+  //for(/*initial var , break case, increment initial var */)
+  //{
+    //generate random number
+    //pick random character with random number
+    //add character to password
+ // }
 // }
-// passwordLength
+
+// Creating the Generate Password Function.
+function generatePassword() {
+// For Loop for Number Generation as (initial var i; break case; increment initial var i by one)
+    for (i = 0; i < passwordLength; i++) {
+        // Generating Random Number
+        let randomNumber = Math.floor(Math.random() * passwordGeneratingCharacters.length);
+        // Generating 
+        passwordGeneratingCharacters[randomNumber];
+        // Picking a Character out of the passwordGeneratingCharacters array.
+        let newCharacters = passwordGeneratingCharacters[i];
+    }
+}
 
 // ====================================================================================================
 // Assignment Code
