@@ -1,155 +1,137 @@
-/*Setting Box-Sizing Set to Border Box Makes Element Include Border When Sizing Element.*/
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/*Gives Body a Background Color.*/
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background-color: #d9dcd6;
+  font-family: sans-serif;
+  background-color: #f9fbfd;
 }
 
-/*Sets Header Attributes.*/
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    background-color: #2a607c;
-    color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
 }
 
-/*Sets Header One Attributes.*/
-header h1 {
-    display: inline-block;
-    font-size: 48px;
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
 }
 
-/*Sets Font Color for Letters "seo" inside "Hiseon".*/
-header h1 .seo {
-    color: #d9dcd6;
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
 }
 
-/*Sets Attributes for Header Navigation Section.*/
-header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    font-size: 20px;
+.card-body {
+  min-height: 100px;
 }
 
-/*Sets Attributes for Unordered List within Navigation Element.*/
-header nav ul {
-    list-style-type: none;
+.card-footer {
+  text-align: center;
 }
 
-/*Sets Attributes for List Items within Ordered List within Navigation Element.*/
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
 }
 
-/*Sets Attributes for Anchor Links.*/
-a {
-    color: #ffffff;
-    text-decoration: none;
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
-/*Sets Attributes for Paragraph Elements.*/
-p {
-    font-size: 16px;
+.btn {
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
 }
 
-/*Sets Hero Image to Hero Image Div and Attributes.*/
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
 }
 
-/*Sets Attibutes for Images Floated Left in Main Content Tag.*/
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-/*Sets Attributes for Image Floated Right in Main Content Tag.*/
 .float-right {
-    float: right;
-    margin-left: 25px;
+  float: right;
 }
 
-/*Sets Attributes for Content in Main Element.*/
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
 }
 
-/*Sets Attributes for Benefits Class*/
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    background-color: #2589bd;
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
 }
 
-/*Sets Attributes for Benefits Sections Class.*/
-.benefits-sections {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-/*Sets Attributes for Benefits Section Headers.*/
-.benefits-sections h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/*Sets Attributes for Benefits Section Images.*/
-.benefits-sections img {
-    display:     block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-/*Sets Attributes for Main Content IDs.*/
-#search-engine-optimization, #online-reputation-management, #social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-/*Sets Height for Main Content Classes Images.*/
-.search-engine-optimization img, .online-reputation-management img, .social-media-marketing img {
-    max-height: 200px;
-}
-
-/*Sets Margins and Font Size for Main Content Headers.*/
-.search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-/*Sets Footer Attributes.*/
-footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    text-align: center;
-}
-
-/*Sets Font Header.*/
-footer h2 {
-    font-size: 20px;
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
 }
