@@ -74,11 +74,47 @@ else {
     alert("Your password will not have numbers.");
 }
 
-// Password Length Value - Prompts the User to Input a Number between eight (8) and one hundred twenty-eight (128) to determine the Length of the Generated Password.
-let passwordLength = prompt("Choose a whole number from eigth (8) to one hundred twenty-eight (128) to determine the length of your password.");
 
-// Alerts the user of choice of password length.
-alert("Your password will be " + passwordLength + " characters long.");
+// // Password Length Value - Prompts the User to Input a Number between eight (8) and one hundred twenty-eight (128) to determine the Length of the Generated Password.
+// let passwordLength = prompt("Choose a whole number from eight (8) to one hundred twenty-eight (128) to determine the length of your password.");
+
+
+// Input validation case for passwordLength prompt requiring the passwordLength to be a number between 8 and 128.
+while (true) { 
+    
+    // Password Length Value - Prompts the User to Input a Number between eight (8) and one hundred twenty-eight (128) to determine the Length of the Generated Password.
+    let passwordLength = prompt("Choose a whole number from eight (8) to one hundred twenty-eight (128) to determine the length of your password.").trim();
+
+    // Conditional Statement (if the passwordLength prompt input is not a number OR if passwordLength is not greater than or equal to eight OR passwordLength is not less than or eequal to one hundred twenty-eight)
+    if (isNaN(passwordLength) || !(passwordLength >= 8) || !(passwordLength <= 128)) {
+
+    // Alerts user of invalid input and outlines correct input parameters.
+    alert("Your input must be a number between eight (8) and one hundred twenty-eight (128).");
+
+    // Breaks and eturns to passwordLength prompt.
+    break;
+    }
+
+    // Alerts the user of choice of password length.
+    else {
+        alert("Your password will be " + passwordLength + " characters long.");
+    }
+}
+
+
+// while(true)
+// {
+//     // Input validation case for passwordLength prompt requiring the passwordLength to be a number between 8 and 128.
+//     if (isNaN(passwordLength) || !(passwordLength >= 8|| !(passwordLength <= 128)) {
+//         alert("Your input must be a number between eight (8) and one hundred twenty-eight (128).");
+//         return passwordLength; 
+//     }
+//     // Alerts the user of choice of password length.
+//     else {
+//         alert("Your password will be " + passwordLength + " characters long.");
+//         break;
+//     }
+// }
 
 // ====================================================================================================
 // Methods to Generate Password
@@ -118,32 +154,25 @@ let passwordGeneratingCharacters = passwordGeneratingCriteria.join('');
 console.log(passwordGeneratingCharacters);
 
 // ====================================================================================================
-// Where I left Off...
+// Generate Password Function
 // ====================================================================================================
-
-// function generatePassword() {
-  //For Loop For Number Generation
-  //for(/*initial var , break case, increment initial var */)
-  //{
-    //generate random number
-    //pick random character with random number
-    //add character to password
- // }
-// }
 
 // Creating the Generate Password Function.
 function generatePassword() {
-// For Loop for Number Generation as (initial var i; break case; increment initial var i by one)
+    // Initializing randomPassword
+    let randomPassword;
+    // For Loop for Number Generation as (initial is 0; break case: initial is less then given pw length; increment initial by one)
     for (i = 0; i < passwordLength; i++) {
+
         // Generating Random Number
         let randomNumber = Math.floor(Math.random() * passwordGeneratingCharacters.length);
-        // Generating 
-        passwordGeneratingCharacters[randomNumber];
-        // Picking a Character out of the passwordGeneratingCharacters array.
-        let newCharacters = passwordGeneratingCharacters[i];
-        // Repeatedly adding newCharacters variable until i (above) is greater than or equal to passwordLength input by user
-        password = password + newCharacters;
+        // Generating Random Characters 
+        let randomCharacters = passwordGeneratingCharacters[randomNumber];
+        // Icrementally adding newCharacters until break case described above.
+        randomPassword = randomPassword + randomCharacters;
     }
+
+    return randomPassword;
 }
 
 // Using console.log to confirm generatePassword function works.
